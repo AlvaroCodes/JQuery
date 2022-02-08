@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba Selectores</title>
+    <script src="../../jquery-3.6.0.js"></script>
+
+    <style>
+        .impar{
+            color: red;
+        }
+        .par{
+            color: green;
+        }
+    </style>
+</head>
+ 
+<body>
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
+    <p>Párrafo 4</p>
+    <p> <span>Hola soy un span</span> Párrafo 5</p>
+</body>
+
+<script>
+ 
+    $('p:odd').addClass('impar');
+    $('p:even').addClass('par');
+
+    $(document).ready(function(){
+        $("p").children().addClass('impar');
+    });
+
+</script>
+ 
+</html>

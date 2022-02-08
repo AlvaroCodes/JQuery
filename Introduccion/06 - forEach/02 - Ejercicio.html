@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../jquery-3.6.0.js"></script>
+</head>
+<body>
+    
+
+    <script>
+
+        const array = [1,1,1,1,3,1];
+
+        // Ejercicio 9
+        // Dado un array de números enteros, vamos a calcular la moda, es decir, el número que más veces se repite dentro del array. 
+        // Para ellos vamos a utilizar la función each de JQuery.
+
+        let numero = [];
+   
+        $.each(array, (i, value)=> {
+
+            if (numero.find(numero => numero.value == value) == undefined){
+                numero.push({
+                    value: value, 
+                    veces: 1
+                })
+            }else {
+                const indice = numero.findIndex((elemento, indice) => {
+                if (elemento.value === value) {
+                    return true;
+                }
+                });
+
+                numero[indice].veces++; 
+            }
+
+        })
+
+        console.log(numero);
+     
+    </script>
+</body>
+</html>

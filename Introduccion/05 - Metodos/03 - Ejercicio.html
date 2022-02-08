@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+    <h1>Ejercicio 11</h1>
+
+
+    <script>
+         const para1 = document.createElement("p");
+        para1.innerText = "Arriba";
+         document.body.appendChild(para1);
+
+          const para2 = document.createElement("p");
+        para2.innerText = "Primero";
+         document.body.appendChild(para2);
+
+         const para3 = document.createElement("p");
+         para3.innerText = "debajo";
+         document.body.appendChild(para3);
+
+
+         $(document).ready(function () {
+             $('p:contains(Primero)').html('<p>Hijo 1</p> <p>Hijo 2</p>');
+         });
+    </script>
+
+</body>
+</html>

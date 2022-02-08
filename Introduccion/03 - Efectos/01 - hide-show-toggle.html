@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript" src="../../jquery-3.6.0.js"></script>
+
+
+    <style> 
+        #panel, #flip {
+          padding: 5px;
+          text-align: center;
+          background-color: #e5eecc;
+          border: solid 1px #c3c3c3;
+        }
+        
+        #panel {
+          padding: 50px;
+          display: none;
+        }
+        </style>
+
+</head>
+<body>
+    <p>Hola!</p>
+
+    <button onclick="show_red()">Show</button>
+    <button onclick="hide()">Hide</button>
+    <button onclick="toggle_blue()">Toggle</button>
+
+    <br>
+    <br>
+
+    <div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+    <br>
+    <br>
+    <button id="fade">Face In</button>
+    <button id="fade_out">Face out</button>
+    <button id="fade_toggle">Face toggle</button>
+    <button id="fade_to">Face to</button>
+    <button id="fade_to_reset">Face to reset</button>
+
+    <br>
+    <br>
+    <div id="flip">Click to slide</div>
+    <div id="panel">Hello world!</div>
+    <br>
+    <br>
+    <button id="animacion">Animacion</button>
+</body>
+    <script>
+
+        const show_red = () => {
+            $('p').show();
+            $('p').css("color", "red");
+        }
+
+        const hide = () => {
+            $('p').hide();
+        }
+
+        const toggle_blue = () => {
+            $('p').toggle();
+            $('p').css("color", "blue");
+        }
+
+
+        $('#fade').click(() => $('div').fadeIn("slow"));
+        
+        $('#fade_out').click(() => $('div').fadeOut("slow"));
+    
+        $('#fade_toggle').click(() => $('div').fadeToggle("slow"));
+    
+        $('#fade_to').click(() => {
+            $("#div1").fadeTo("slow", 0.15);
+            $("#div2").fadeTo("slow", 0.4);
+            $("#div3").fadeTo("slow", 0.7);
+        });
+
+        $('#fade_to_reset').click(() => {
+            $("#div1").fadeTo("slow", 1);
+            $("#div2").fadeTo("slow", 1);
+            $("#div3").fadeTo("slow", 1);
+        });
+
+        $("#flip").click(()=> $("#panel").slideToggle("slow"));
+    
+    
+        /* 
+        Crea una animación la cual cumpla las siguientes caracteristicas:
+        1.- Crear un div de 100px de color rojo
+        2.- Este div tiene que expandirse 600px de ancho
+        3.- Conforme se va expandiedno tiene que perder opacidad
+        4.- Luego cuando llega a 600px tiene que volver a tu estado 
+        original recuperando la opacidad
+        */ 
+
+
+        $('#animacion').click(()=> $('div').animate({
+            opacity: '0', 
+            width : '600px'
+        }));
+        
+
+        $('#animacion').click(()=> $('div').animate({
+            opacity: '1', 
+            width : '100px'
+        }));
+
+    </script>
+</html>

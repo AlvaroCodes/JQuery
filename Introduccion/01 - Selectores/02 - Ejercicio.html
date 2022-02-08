@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Prueba Selectores</title>
+<script type="text/javascript" src="../../jquery-3.6.0.js"></script>
+</head>
+<body>
+<ul id="list1">
+<li class="a">Item 1</li>
+<li class="b">Item 2</li>
+<li class="a">Item 3</li>
+<li class="b">Item 4</li>
+</ul>
+<p class="class1">Mario</p>
+<p class="paragraph1">Luigi</p>
+<p class="class2">Toad</p>
+<p class="paragraph2">Bowser</p>
+<p></p>
+
+<div>
+    <p class="class1">Mariaaaa</p>
+</div>
+
+<script>
+    // seleccionar todos los párrafos que tengan el atributo class
+    // $("[class]").hide();
+    // seleccionar todos los párrafos que tengan el atributo id con el valor paragraph1
+    // $('[id = paragraph1]').hide();
+    // seleccionar todos los párrafos cuyo id empiece por "para"
+    // $("p[id^='para']").hide();
+    // seleccionar todos los párrafos cuyo id empiece por "para" y tenga un atributo llamado align que contenga "center"
+    //  $("p[id^=para][style=center]").hide();
+    // seleccionar todos los párrafos que contengan la palabra "Mario"
+    // $("p:contains(Mario)").hide();
+    // Todos los elementos que esten vacios 
+    // $(":empty").text('Hola estoy vacio');
+    // Todos los que contengan algo
+    // $(":not(:empty)").css("border", "solid red");
+    // seleccionar los div que tengan un parrafo dentro
+    //  $("div:has(p)").css("border", "solid red");
+</script>
+</body>
+</html>

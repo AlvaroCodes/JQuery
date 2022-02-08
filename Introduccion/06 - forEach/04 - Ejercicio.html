@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../jquery-3.6.0.js"></script>
+</head>
+<body>
+    <div>
+        <p>Parrafo 1</p>
+    </div>
+        <div id="miDiv1">
+            <p>
+                Parrafo 2
+            </p>
+            <div id="miDiv2">
+                <p>Parrafo 3</p>
+            </div>
+            <div>
+                <ul>
+                    <li>lista 1</li>
+                    <li>lista 2</li>
+                    <li>lista 3</li>
+                </ul>
+            </div>
+        </div>
+    <div>
+        <p>Parrafo 4</p>
+    </div>
+
+    <script>
+       
+
+            $('#miDiv1').find("p").each(function (index, contenido) {
+                alert('Índice: '+index+' Texto: '+contenido.textContent);
+            });
+
+        
+    </script>
+</body>
+</html>

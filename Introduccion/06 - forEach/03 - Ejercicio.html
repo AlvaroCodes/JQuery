@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <input type="checkbox" name="Verde" id="verde">
+    <label for="verde">Verde</label>
+    
+    <input type="checkbox" name="Rojo" id="rojo">
+    <label for="rojo">Rojo</label>
+
+    <input type="checkbox" name="Amarrillo" id="amarrillo">
+    <label for="amarrillo">Amarrillo</label>
+
+    <button onclick="marcarDesmarcados()">Marcar los desmarcados</button>
+
+    <script>
+
+        function marcarDesmarcados() {
+            $(document).ready(function () {
+           $('input').each(function (indice, elemento) {
+                $(this).prop('checked', true);
+            })
+        });
+        }
+
+        
+
+      
+    </script>
+</body>
+</html>

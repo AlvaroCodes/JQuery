@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script type="text/javascript" src="../../jquery-3.6.0.js"></script>
+<body>
+    
+
+    <p>Hola Mundo!</p>
+
+    <table border="1">
+        <tr>
+            <td>Hola I</td>
+            <td>Hola I</td>
+        </tr>
+        <tr>
+            <td>Hola</td>
+            <td>Hola</td>
+        </tr>
+        <tr>
+            <td>Hola I</td>
+            <td>Hola I</td>
+        </tr>
+    </table>
+
+    <h2 class="h2__1">Clase 1</h2>
+    <h2 class="h2__2">Clase 2</h2>
+
+    <br>
+
+    <button onclick="ocultar()">CLICK</button>
+    <button onclick="ocultarSegundaFila()">CLICK fila 2</button>
+    <button onclick="ocultarImpar()">CLICK Impar</button>
+    <button onclick="clases()">CLICK por clases</button>
+    <button onclick="cambiarWith()">CLICK imagen</button>
+    <button onclick="cambiarEnlace()">CLICK cambiarEnlace</button>
+
+    <p>Hola</p>
+    <p>Adios</p>
+
+    <img src="./Linus-torvalds.jpg" alt="img">
+
+    <a style="font-size: 2rem;" href="https://www.youtube.com/">youtube</a>
+
+    <br>
+    <br>
+
+    <form action="">
+        <label for="">Introduce texto</label>
+        <input type="text" name="texto" id="texto">
+        <button onclick="input_valor()">CLICK valor input</button>
+    </form>
+    <script>
+        const ocultar = function () {
+            $('p').hide();
+        }
+
+        const ocultarImpar = function () {
+            $('tr:nth-child(odd)').css("border", "solid red");
+            // $('tr:nth-child(odd)').hide();
+        }
+
+        const ocultarSegundaFila = function () {
+            // Manejo de arrays 
+            console.log($('tr')); 
+             // $('tr:eq(1)').hide();
+
+            $('tr:eq(1)').css("border", "solid red");
+        }
+
+        const clases = function () {
+        $('[class]').css("color", "red");
+        }
+
+        $('#texto').val('Hola Mundo');
+        // input jquery valor de input
+        const input_valor = function () {
+            alert( $('#texto').val());
+        }
+
+
+        $('img').attr('width', "500");
+
+        const cambiarWith= () =>  {
+            $('img').attr('src', "1.jpg");
+        }
+
+        const cambiarEnlace = () =>  {
+            $('a').attr('href', "https://www.google.es/");
+            $('a').text('google');
+        }
+        console.log($('p').text());
+        console.log($('p').html());
+      
+        const p = document.querySelectorAll('p');
+        console.log(p[1]);
+    </script>
+</body>
+</html>

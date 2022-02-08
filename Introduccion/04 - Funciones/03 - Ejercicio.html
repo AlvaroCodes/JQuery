@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    
+<h1>Ejercicio 6</h1>
+
+<form action="">
+    <label for="password">password:</label>
+    <input id="pass1" type="password">
+    <label id="car1" for="caracter1">8 Caracteres(s) Restantes</label>
+
+    <br>
+    <br>
+    
+    <label for="password">password: </label>
+    <input id="pass2" type="password">
+    <label id="car2" for="caracter2">8 Caracteres(s) Restantes</label>
+
+</form>
+
+<script>
+
+    $(document).ready(function () {
+        
+        const caracteresMaximos = 8;
+
+        $('#pass1').keyup(function () {
+            $('#car1').text( ($('#pass1').val().lengt > caracteresMaximos)? ` El máximo es ${caracteresMaximos}`
+            :`${caracteresMaximos - $('#pass1').val().length } Caracteres(s) Restantes`);
+
+        })
+
+        $('#pass2').keyup(function () {
+            $('#car2').text( ($('#pass2').val().lengt > caracteresMaximos)? ` El máximo es ${caracteresMaximos}`
+            :`${caracteresMaximos - $('#pass2').val().length } Caracteres(s) Restantes`);
+
+        })
+    });
+
+</script>
+
+</body>
+</html>

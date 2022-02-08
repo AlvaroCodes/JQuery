@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../jquery-3.6.0.js"></script>
+</head>
+<body>
+
+    <input  type="text">
+
+    <ul>
+        <li>Me llamo alvaro</li>
+        <li>Me llamo Juan</li>
+        <li>Me llamo Paco</li>
+        <li>Me llamo Joaquin</li>
+        <li>Esto es una prueba</li>
+        <li>Hello world</li>
+    </ul>
+
+    <script>
+
+
+       
+            $(document).ready( function(){
+                $("input").keyup(function(){
+                    
+                  console.log($("input").val());
+                  let value = $(this).val().toLowerCase();
+
+                    $("li").filter(function(){
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                    })
+
+                });
+            });
+       
+
+        
+
+    </script>
+</body>
+</html>

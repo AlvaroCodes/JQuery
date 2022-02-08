@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Examen<strong> UT 4 </strong></h1>
+    <h2>Integración de contenido interactivo</h2>
+
+
+    <div id="principal">
+        <p>Mi primer párrafo</p>
+        <p>Mi primer párrafo<span> de verdad</span></p>
+        <div id="secudario">
+            <p>Mi segundo párrafo</p>
+            <p>Mi tercer párrafo</p>
+        </div>
+        <p class="footer">Esto es todo <span>amig@s &copy;</span></p>
+    </div>
+
+
+    <script>
+          $(document).ready(function () {  
+            $(" #principal > p").find("span").eq(0).css('border','1px solid red');
+        });
+
+    </script>
+</body>
+</html>

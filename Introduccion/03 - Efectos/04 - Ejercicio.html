@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        div {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 8</h1>
+    <button>Paras animacion</button>
+    <p>Hola Mundo</p>
+
+    <div>
+       <h2>Hola soy un div</h2>
+    </div>
+
+    
+
+    <script>
+        $(document).ready(function () {
+
+            $('p').click(function () {
+                $('div').slideToggle("slow");
+            });
+
+            $('div').click(function () {
+                $('div').animate({ 'marginTop': '400px'}, 1000,alerta);
+            });
+
+
+            function alerta() {
+                alert('Animacion terminada');
+            }
+
+            $('button').click(function () {
+                $('div').stop();
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script type="text/javascript" src="../jquery-3.6.0.js"></script>
+</head>
+<body>
+
+    <h1>Ejercicio 4</h1>
+    
+    <p id="id">Por id</p>
+    <span>Por etiqueta</span>
+    <p class="clase">Por Clase</p>
+    <a href="default.htm">Por atributo</a>
+    <a href="default.htm">Valor de atributo</a>
+    <p>Selector Universal</p>
+    <p>Selector Anidado <span>: )</span></p>
+    <ol>
+        <li>Seleccion de varios elementos</li>
+        <li>Seleccion de varios elementos</li>
+        <li>Seleccion de varios elementos</li>
+        <li>Seleccion de varios elementos</li>
+    </ol>
+       
+    <script>
+        /*
+        Crea un documento HTML que incluya las marcas necesarias para
+        testear los siguientes selectores. Para cada elemento se trata
+        de aplicarle un color diferente.
+        */
+
+        $("#id").css('color', 'red');
+        $("span").css('color', 'blue');
+        $(".clase").css('color', 'green');
+        /*
+        $("[href]").css('text-decoration', 'none');
+        $("[href]").css('color', '#828213');
+        */
+        $("[href='default.htm']").css('text-decoration', 'none');
+        $("[href='default.htm']").css('color', '#828213');
+
+        // $('*').css('color', 'red');
+        $("p").children().css({"color": "orange", "border": "2px solid red", "padding": "10px"});
+
+        $("ol").children().css({"color": "brown"});
+    </script>
+</body>
+</html>

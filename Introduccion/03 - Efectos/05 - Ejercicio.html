@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script type="text/javascript" src="../../jquery-3.6.0.js"></script>
+
+<body>
+
+    <div style="background:#9c0f9c; height:100px; width:100px; position:absolute;"></div>
+  
+
+   
+
+    <button id="start" style="margin-top: 120px;">Start Animation</button>
+    <button id="stop" style="margin-top: 120px;">Stop Animation</button>
+    <button id="prueba" style="margin-top: 120px;"> Animation</button>
+    
+    <p>Hola</p>
+    <p>Adios</p>
+    <p>Juan</p>
+    <p>Paco</p>
+    <script>
+
+        //  Coloca un cuadrado que se desplace a la derecha y izquierda.
+
+        $(document).ready(function(){
+            $("#start").click(function(){
+                $("div").animate({left: '650px'});
+                $("div").animate({left: '10px'});
+            });
+        });
+
+        $(document).ready(function(){
+            $("#stop").click(function(){
+                $("div").stop();
+               
+            });
+        });
+
+        $(document).ready(function(){
+            $("#prueba").click(function(){
+                // $("p").slice(2).hide();
+
+                // * Solo elimina hijos
+                // $("p").empty();
+                
+                // * Elimina todo 
+                // $("p").remove();
+            });
+        });
+
+        // Añadir elementos 
+        // $("p").append("Hola soy ");
+        $("p").prepend("Hola soy ");
+        // $("p").after("Hola soy ");
+        // $("p").before("Hola soy ");
+      
+
+        // https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_parent
+        
+    </script>
+</body>
+</html>
